@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv0"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:corner_radius="20dp" />
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:border_color="#FF7F24"
+            app:border_width="2dp"
+            app:corner_radius="20dp" />
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:border_color="#FF7F24"
+            app:border_width="2dp"
+            app:corner_bottom_left_radius="10dp"
+            app:corner_bottom_right_radius="60dp"
+            app:corner_top_left_radius="60dp"
+            app:corner_top_right_radius="10dp" />
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:is_circle="true" />
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:border_color="#FF7F24"
+            app:border_width="4dp"
+            app:is_circle="true" />
+
+
+        <com.othershe.library.NiceImageView
+            android:id="@+id/nice_iv5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat"
+            app:border_color="#008B45"
+            app:border_width="2dp"
+            app:corner_radius="20dp"
+            app:inner_border_color="#FF7F24"
+            app:inner_border_width="4dp"
+            app:is_circle="true" />
+
+    </LinearLayout>
+
+</ScrollView>
