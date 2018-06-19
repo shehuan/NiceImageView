@@ -1,6 +1,6 @@
 # NiceImageView
 
-效果预览
+### 效果预览
 
 |![](images/r1.PNG)|![](images/r2.PNG)|![](images/r3.PNG)|
 |---|---|---|
@@ -54,11 +54,11 @@ dependencies {
 |inner_border_width|相当于内层边框（is_circle为true时支持）|0dp|setInnerBorderWidth()
 |inner_border_color|内边框颜色|#ffffff|setInnerBorderColor()
 |is_cover_src|border、inner_border是否覆盖图片内容|false|isCoverSrc()
-|mask_color|在图片上绘制一层遮罩|不设置颜色则不绘制|setMaskColor()
+|mask_color|图片上绘制的遮罩颜色|不设置颜色则不绘制|setMaskColor()
 
 ### 其它
 如果你需要实现类似钉钉的圆形组合头像，例如：
 
 ![](images/d3.PNG)
 
-可以先生成对应的Bitmap，并用圆形的 NiceImageView 显示即可。如何生成组合Bitmap可以参考这里[CombineBitmap]()
+可以先生成对应的Bitmap，并用圆形的 NiceImageView 显示即可。如何生成组合Bitmap可以参考这里：[CombineBitmap](https://github.com/Othershe/CombineBitmap)
