@@ -26,7 +26,7 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'com.github.Othershe:NiceImageView:1.0.0'
+    implementation 'com.github.Othershe:NiceImageView:1.0.1'
 }
 ```
 **Step 3. 在布局文件中添加CornerLabelView**

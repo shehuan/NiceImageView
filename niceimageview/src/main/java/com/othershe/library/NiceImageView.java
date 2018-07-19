@@ -99,7 +99,6 @@ public class NiceImageView extends AppCompatImageView {
         borderRectF = new RectF();
         srcRectF = new RectF();
 
-        setScaleType(ScaleType.FIT_XY);
         xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
 
         calculateRadii();
