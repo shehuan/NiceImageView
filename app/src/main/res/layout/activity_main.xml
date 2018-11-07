@@ -12,7 +12,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv0"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -20,7 +20,7 @@
             android:src="@drawable/cat"
             app:corner_radius="20dp" />
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv1"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -30,7 +30,7 @@
             app:border_width="2dp"
             app:corner_radius="20dp" />
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv2"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -43,7 +43,7 @@
             app:corner_top_left_radius="60dp"
             app:corner_top_right_radius="10dp" />
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv3"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -51,7 +51,7 @@
             android:src="@drawable/cat"
             app:is_circle="true" />
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv4"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -62,7 +62,7 @@
             app:is_circle="true" />
 
 
-        <com.othershe.library.NiceImageView
+        <com.shehuan.library.NiceImageView
             android:id="@+id/nice_iv5"
             android:layout_width="200dp"
             android:layout_height="200dp"

@@ -1,4 +1,4 @@
-package com.othershe.library.test;
+package com.shehuan.library.test;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

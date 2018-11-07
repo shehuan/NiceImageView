@@ -1,4 +1,4 @@
-package com.othershe.library.test;
+package com.shehuan.library.test;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
