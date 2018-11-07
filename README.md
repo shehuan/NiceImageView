@@ -26,12 +26,12 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'com.github.SheHuan:NiceImageView:1.0.2'
+    implementation 'com.github.SheHuan:NiceImageView:1.0.3'
 }
 ```
 **Step 3. 在布局文件中添加CornerLabelView**
 ```
-<com.shehuan.library.NiceImageView
+<com.shehuan.niv.NiceImageView
     android:layout_width="200dp"
     android:layout_height="200dp"
     android:layout_marginTop="10dp"

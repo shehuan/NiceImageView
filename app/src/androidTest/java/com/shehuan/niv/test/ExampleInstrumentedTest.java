@@ -1,4 +1,4 @@
-package com.shehuan.library.test;
+package com.shehuan.niv.test;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
