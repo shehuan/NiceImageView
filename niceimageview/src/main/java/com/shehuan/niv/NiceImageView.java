@@ -11,6 +11,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.graphics.Xfermode;
+import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatImageView;
@@ -46,8 +47,9 @@ public class NiceImageView extends AppCompatImageView {
     private RectF srcRectF; // 图片占的矩形区域
     private RectF borderRectF; // 边框的矩形区域
 
-    private Path path = new Path();
-    private Paint paint = new Paint();
+    private Paint paint;
+    private Path path; // 用来裁剪图片的ptah
+    private Path srcPath; // 图片区域大小的path
 
     public NiceImageView(Context context) {
         this(context, null);
@@ -99,7 +101,15 @@ public class NiceImageView extends AppCompatImageView {
         borderRectF = new RectF();
         srcRectF = new RectF();
 
-        xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+        paint = new Paint();
+        path = new Path();
+
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1) {
+            xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+        } else {
+            xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
+            srcPath = new Path();
+        }
 
         calculateRadii();
         clearInnerBorderWidth();
@@ -122,7 +132,7 @@ public class NiceImageView extends AppCompatImageView {
         if (!isCoverSrc) {
             float sx = 1.0f * (width - 2 * borderWidth - 2 * innerBorderWidth) / width;
             float sy = 1.0f * (height - 2 * borderWidth - 2 * innerBorderWidth) / height;
-            // 缩小画布，使图片内容不被border、padding覆盖
+            // 缩小画布，使图片内容不被borders覆盖
             canvas.scale(sx, sy, width / 2.0f, height / 2.0f);
         }
         super.onDraw(canvas);
@@ -137,7 +147,14 @@ public class NiceImageView extends AppCompatImageView {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.FILL);
         paint.setXfermode(xfermode);
-        canvas.drawPath(path, paint);
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1) {
+            canvas.drawPath(path, paint);
+        } else {
+            srcPath.addRect(srcRectF, Path.Direction.CCW);
+            // 计算tempPath和path的差集
+            srcPath.op(path, Path.Op.DIFFERENCE);
+            canvas.drawPath(srcPath, paint);
+        }
         paint.setXfermode(null);
 
         // 绘制遮罩
