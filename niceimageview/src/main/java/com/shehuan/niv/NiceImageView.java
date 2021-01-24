@@ -150,6 +150,7 @@ public class NiceImageView extends AppCompatImageView {
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1) {
             canvas.drawPath(path, paint);
         } else {
+            srcPath.reset();
             srcPath.addRect(srcRectF, Path.Direction.CCW);
             // 计算tempPath和path的差集
             srcPath.op(path, Path.Op.DIFFERENCE);
